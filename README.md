@@ -110,3 +110,73 @@ C:\Users\Administrator.ssh目录下生成到id_rsa和id_rsa.pub两个文件，id
 git clone git@github.com:xmu-tang/SpringBoot.git
 ```
 
+创建分支
+
+```shell
+git branch dev
+```
+
+切换分支
+
+```shell
+git checkout dev
+```
+
+查看当前分支
+
+```shell
+git branch
+```
+
+合并指定分支到当前分支
+
+```shell
+git merge dev
+```
+
+删除分支
+
+```shell
+git branch -d dev
+```
+
+分支冲突后，进行手动调整，然后提交分支
+
+查看分支合并图
+
+```shell
+git log --graph --pretty=oneline --abbrev-commit
+```
+
+强制禁用`Fast forward`模式进行合并提交
+
+```shell
+git merge --no-ff -m "merge with no-ff" dev
+```
+
+暂存工作区
+
+```shell
+git stash
+```
+
+查看暂存区内容
+
+```shell
+git stash list
+```
+
+恢复暂存区（不删除）
+
+```shell
+git stash apply
+多次stash,指定恢复内容:git stash apply stash@{0}
+删除：git stash drop
+```
+
+恢复暂存区（删除）
+
+```shell
+git stash pop
+```
+
